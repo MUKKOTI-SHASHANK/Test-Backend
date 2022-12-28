@@ -3,7 +3,9 @@ import  mongoose from "mongoose";
 import router from "./routes/loginRoutes";
 import blogRuter from "./routes/blogRoutes";
 import cors from "cors";
+import bodyparser from "body-parser" 
 const app = express();
+app.use(bodyparser)
 app.use(cors());
 app.use(express.json());
 app.use("/user", router);
